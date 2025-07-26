@@ -37,7 +37,7 @@ public class Order implements Serializable {
     private Payment payment;
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
-    private ShippingInfo shippingInfo;
+    private ShippingInfo shippingInfo = new ShippingInfo();
 
     //----------------------------------------------------------------------------------------------
 
@@ -110,6 +110,7 @@ public class Order implements Serializable {
         for (ShoppingCart item : items) {
             sum += item.getSubTotal();
         }
+        sum += shippingInfo.getPrice();
         return sum;
     }
 
