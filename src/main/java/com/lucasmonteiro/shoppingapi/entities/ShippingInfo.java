@@ -33,12 +33,13 @@ public class ShippingInfo implements Serializable {
     public ShippingInfo() {
     }
 
-    public ShippingInfo(Long id, ShippingType shippingType, Double price, String postalCode, String adressNumber) {
+    public ShippingInfo(Long id, ShippingType shippingType, Double price, String postalCode, String adressNumber, Order order) {
         this.id = id;
         setShippingType(shippingType);
         this.price = price;
         this.postalCode = postalCode;
         this.adressNumber = adressNumber;
+        this.order = order;
     }
 
     public Long getId() {

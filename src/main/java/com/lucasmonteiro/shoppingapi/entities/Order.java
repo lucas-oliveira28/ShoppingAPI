@@ -36,6 +36,9 @@ public class Order implements Serializable {
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private Payment payment;
 
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private ShippingInfo shippingInfo;
+
     //----------------------------------------------------------------------------------------------
 
     public Order() {
@@ -88,6 +91,14 @@ public class Order implements Serializable {
 
     public void setPayment(Payment payment) {
         this.payment = payment;
+    }
+
+    public ShippingInfo getShippingInfo() {
+        return shippingInfo;
+    }
+
+    public void setShippingInfo(ShippingInfo shippingInfo) {
+        this.shippingInfo = shippingInfo;
     }
 
     public Set<ShoppingCart> getItems() {

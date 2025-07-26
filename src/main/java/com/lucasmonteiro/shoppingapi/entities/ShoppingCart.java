@@ -15,7 +15,7 @@ public class ShoppingCart implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @EmbeddedId
-    private ShoppingCartPK id;
+    private ShoppingCartPK id = new ShoppingCartPK();
 
     private Integer quantity;
     private Double price;
