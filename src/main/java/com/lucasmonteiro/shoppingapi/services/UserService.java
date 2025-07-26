@@ -56,4 +56,16 @@ public class UserService {
         entity.setName(user.getName());
         entity.setEmail(user.getEmail());
     }
+
+    public void login(Long id, String password) {
+        try {
+            User entity = repository.getReferenceById(id);
+            if (entity.getPassword().equals(password)) {
+                entity.setLogin(true);
+                repository.save(entity);
+            }
+        }  catch (EntityNotFoundException e) {
+            throw new ResourceNotFoundException(id);
+        }
+    }
 }

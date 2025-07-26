@@ -47,4 +47,10 @@ public class UserResource {
         user = service.update(id, user);
         return ResponseEntity.ok(user);
     }
+
+    @PutMapping("/login/id={id}&password={password}")
+    public ResponseEntity<User> login(@PathVariable Long id, @PathVariable String password) {
+        service.login(id, password);
+        return ResponseEntity.accepted().build();
+    }
 }

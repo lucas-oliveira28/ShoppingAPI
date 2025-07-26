@@ -21,6 +21,7 @@ public class User implements Serializable {
     private String email;
     private String password;
     private Integer userLevel;
+    private boolean login = false;
 
     //---------------------------------------Associations------------------------------------------
 
@@ -69,10 +70,6 @@ public class User implements Serializable {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public UserLevel getUserLevel() {
         return UserLevel.valueOf(userLevel);
     }
@@ -85,6 +82,14 @@ public class User implements Serializable {
 
     public List<Order> getOrders() {
         return orders;
+    }
+
+    public boolean isLogin() {
+        return login;
+    }
+
+    public void setLogin(boolean login) {
+        this.login = login;
     }
 
     @Override
