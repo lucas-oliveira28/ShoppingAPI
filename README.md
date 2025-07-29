@@ -1,7 +1,7 @@
 
 # ⚙️ Shopping API
 
-Um repositório com os commits de uma API REST com um CRUD voltado para gerenciamento de usuários, produtos e ordem de pedidos, utilizando o H2 como banco de dados relacional para testes.
+Um repositório com os commits de uma API REST em Java com SpringBoot, com um CRUD voltado para gerenciamento de usuários, produtos e ordem de pedidos, utilizando o H2 como banco de dados relacional para testes.
 
 
 ## 💡 Funcionalidades
